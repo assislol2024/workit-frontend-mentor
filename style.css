@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Manrope:wght@200..800&display=swap");
+:root {
+  --verde: #44ffa1;
+  --roxo: #24053e;
+  --sans-serif: "Manrope", sans-serif;
+  --serif: "Fraunces", serif;
+  /* espaçamentos */
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+  --space-xl: 60px;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  font-family: var(--serif);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---- Header */
+.section-data,
+header {
+  color: white;
+  background-color: var(--roxo);
+  padding: var(--space-lg) var(--space-md);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--sans-serif);
+  width: 100%;
+}
+
+#header-apply h2 {
+  font-size: 1.5rem;
+  position: relative;
+  font-weight: 100;
+}
+
+#header-apply h2::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--verde);
+  bottom: -8px;
+  left: 0;
+}
+
+/* --- section-data */
+
+.section-data {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200%;
+  height: 65dvh;
+  max-height: 550px;
+  border-radius: 0 0 50% 50%;
+  margin-bottom: 100px;
+}
+
+.section-data h1 {
+  text-align: center;
+  font-size: clamp(3rem, 5vw, 70px);
+  width: clamp(100px, 50%, 500px);
+  margin: var(--space-lg) 0;
+}
+
+.section-data h1 span {
+  position: relative;
+}
+
+.section-data h1 span::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--verde);
+  bottom: 0;
+  left: 0;
+}
+
+.section-data button,
+.card-apresentation button {
+  background-color: var(--verde);
+  color: var(--roxo);
+  border: none;
+
+  padding: var(--space-md) var(--space-lg);
+  font-size: 1.5rem;
+  font-weight: bolder;
+
+  margin-bottom: var(--space-lg);
+  cursor: pointer;
+}
+
+.section-data img {
+  position: absolute;
+  bottom: -100px;
+  translate: (-50%, -50%);
+  width: clamp(300px, 50%, 400px);
+}
+
+/* --- section cards */
+
+.section-cards {
+  background-color: rgba(254, 252, 255, 0.334);
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 30px;
+  margin: var(--space-xl) 0;
+
+  color: var(--roxo);
+}
+
+.text-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: var(--space-md);
+  text-align: center;
+
+  width: 90%;
+  max-width: 350px;
+}
+
+.text-cards section {
+  width: 100%;
+}
+
+.number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid var(--roxo);
+  border-radius: 50%;
+
+  width: 2.5rem;
+  height: 2.5rem;
+
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+}
+
+.title-cards {
+  font-size: clamp(1.7rem, 90%, 4rem);
+  margin-bottom: var(--space-sm);
+}
+.text-cards .paragraf {
+  font-family: var(--sans-serif);
+  font-size: clamp(1rem, 90%, 2.5rem);
+  line-height: 2rem;
+  font-weight: 100;
+}
+
+/* section presentation */
+.section-apresentation {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-apresentation img {
+  width: clamp(200px, 65%, 400px);
+  margin-bottom: -50px;
+}
+.card-apresentation {
+  background-color: var(--roxo);
+  max-width: 500px;
+  color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-apresentation h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.card-apresentation p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  font-family: var(--sans-serif);
+  font-weight: lighter;
+  margin-bottom: 30px;
+  width: 80%;
+  text-align: justify;
+}
+.card-apresentation button {
+  font-size: 1.3rem;
+  width: 70%;
+}
+/* footer */
+footer {
+  padding: 70px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+footer > img {
+  width: 100px;
+}
+footer img {
+  cursor: pointer;
+}
+footer section {
+  display: flex;
+  gap: 30px;
+}
